@@ -19,8 +19,36 @@
   --texto: #222222;
   --texto-inverso: #ffffff;
   --destaque: #2d2c4b;
-  --destaque-inverso: #a6a4ca;
+  --destaque-inverso: #b3aff4; /*#a6a4ca; -> antiga cor */
   --fundo-card: #ffffff;
+}
+
+body.escuro {
+  --fundo-principal: #121214;
+  --texto: #f5f5f5;
+  --texto-inverso: #121214;
+  --destaque: #b3aff4;
+  --destaque-inverso: #2d2c4b;
+  --fundo-card: #1e1e24;
+}
+
+body.escuro header {
+  background-color: var(--destaque-inverso);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.288);
+}
+
+body.escuro nav#menu a {
+  color: var(--texto);
+}
+
+body.escuro nav#menu a:hover {
+  background-color: var(--destaque);
+  color: var(--destaque-inverso);
+}
+
+body.escuro footer {
+background-color: var(--destaque-inverso);
+  color: var(--texto);
 }
 
 body {
@@ -28,6 +56,7 @@ body {
   line-height: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
+  transition: background-color .5s, color .5s;
 }
 
 header {
@@ -252,16 +281,6 @@ footer {
   color: var(--texto-inverso);
   text-align: center;
   padding: 15px;
-}
-
-footer a {
-  color: var(--texto-inverso);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer a:hover {
-  color: var(--destaque-inverso);
 }
 
 @media screen and (min-width: 768px) {
